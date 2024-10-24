@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakfast Recipes - The Diet Diary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #3a7bd5;
+            color: white;
+            margin: 0;
+        }
+        .recipe-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .recipe-card {
+            background-color: white;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .recipe-card h3 {
+            margin: 10px 0;
+        }
+        .recipe-card p {
+            font-size: 14px;
+        }
+        .recipe-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #3a7bd5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .recipe-card a:hover {
+            text-decoration: underline;
+        }
+        .hidden-content {
+            display: none; /* Ensure hidden content is initially hidden */
+        }
+        @media screen and (max-width: 768px) {
+            .recipe-card {
+                width: 90%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .recipe-card {
+                width: 100%;
+            }
+        }
+    </style>
+    
+    <script>
+        function toggleContent(id, link) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                link.textContent = "Show Less"; // Change link text to "Show Less"
+            } else {
+                content.style.display = "none";
+                link.textContent = "Read More"; // Change link text to "Read More"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Breakfast Recipes</h1>
+
+    <div class="recipe-container">
+        <div class="recipe-card">
+            <img src="images/recipes/oatmeal.jpg" alt="Oatmeal with Fresh Berries">
+            <h3>Oatmeal with Fresh Berries</h3>
+            <p>A hearty bowl of oatmeal topped with fresh blueberries, raspberries, and a drizzle of honey for a nutritious start to your day.</p>
+            <a href="#" onclick="toggleContent('oatmealContent', this)">Read More</a>
+            <div id="oatmealContent" class="hidden-content">
+           <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Oatmeal is high in soluble fiber, particularly beta-glucan, which helps lower LDL cholesterol levels, supporting cardiovascular health. The antioxidants in berries further promote heart health by reducing inflammation and oxidative stress.</li>
+    <li><strong>Digestive Health:</strong> The fiber in both oatmeal and berries aids digestion, promoting regular bowel movements and maintaining a healthy gut.</li>
+    <li><strong>Weight Management:</strong> The high fiber content keeps you feeling fuller for longer, reducing the likelihood of overeating throughout the day. This can support weight management or weight loss efforts.</li>
+    <li><strong>Blood Sugar Control:</strong> Oats have a low glycemic index, which means they release glucose into the bloodstream slowly, helping to maintain stable blood sugar levels. The natural sugars from the berries and honey provide sweetness without causing a sharp spike in blood sugar.</li>
+    <li><strong>Antioxidant Boost:</strong> Blueberries and raspberries are loaded with antioxidants, such as vitamin C and anthocyanins, which help protect the body from free radical damage, boost immune function, and improve skin health.</li>
+    <li><strong>Energy:</strong> Oats provide a sustained source of carbohydrates, while the seeds (if added) provide healthy fats, making this meal a balanced source of energy to power you through the morning.</li>
+    <li><strong>Bone Health:</strong> If made with calcium-fortified milk or plant-based milk, this meal can contribute to your daily calcium intake, supporting bone strength.</li>
+</ul>
+<p>This breakfast is an excellent choice for anyone looking for a nutritious, balanced, and heart-healthy meal to start the day.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here's the approximate nutritional breakdown for a serving of Oatmeal with Fresh Berries based on the ingredients listed:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 bowl</li>
+    <li><strong>Calories:</strong> ~300 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~55g</li>
+    <li><strong>Sugars:</strong> ~15g (including natural sugars from honey and berries)</li>
+    <li><strong>Fiber:</strong> ~8g</li>
+    <li><strong>Protein:</strong> ~8g</li>
+    <li><strong>Fat:</strong> ~6g</li>
+    <li><strong>Saturated Fat:</strong> ~0.5g (depending on the type of milk used)</li>
+    <li><strong>Calcium:</strong> ~150mg (varies based on milk choice)</li>
+    <li><strong>Iron:</strong> ~3mg</li>
+    <li><strong>Potassium:</strong> ~300mg</li>
+    <li><strong>Vitamin C:</strong> ~15mg (from berries)</li>
+    <li><strong>Sodium:</strong> ~100mg</li>
+</ul>
+<p>These values can change slightly depending on the type of milk (dairy vs. non-dairy) and additional toppings like seeds. For example, using almond milk will reduce calories and fat compared to whole milk, while adding chia or flaxseeds will boost omega-3 fats and fiber.</p>
+
+<h4>Delicious Oatmeal with Fresh Berries Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>1 cup rolled oats</li>
+    <li>2 cups water or milk (almond, soy, or regular)</li>
+    <li>A pinch of salt</li>
+    <li>1/2 cup fresh blueberries</li>
+    <li>1/2 cup fresh raspberries</li>
+    <li>1 tablespoon honey (or maple syrup)</li>
+    <li>1/4 teaspoon cinnamon (optional)</li>
+    <li>1 tablespoon chia seeds or flaxseeds (optional)</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Prepare the Oatmeal:</strong> In a medium-sized pot, bring water or milk to a boil. Add the rolled oats and a pinch of salt. Reduce the heat to low and let the oats simmer for about 5-7 minutes, stirring occasionally, until they reach your desired consistency.</li>
+    <li><strong>Flavoring:</strong> Once the oats are cooked, remove the pot from the heat. Stir in the cinnamon (if using) for added flavor.</li>
+    <li><strong>Top with Fresh Berries:</strong> Spoon the oatmeal into a bowl. Top it with fresh blueberries and raspberries.</li>
+    <li><strong>Drizzle with Honey:</strong> For a touch of sweetness, drizzle the honey over the berries.</li>
+    <li><strong>Add Optional Toppings:</strong> If you like extra texture and nutrition, sprinkle chia seeds or flaxseeds on top.</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>Enjoy warm, paired with a cup of coffee or tea for a balanced and nutritious breakfast.</p>
+
+<p>This simple yet delicious oatmeal with fresh berries is packed with fiber, antioxidants, and natural sweetness, making it the perfect way to fuel your day!</p>
+            </div>
+        </div>
+
+
+        <!-- Other recipe cards... -->
+      <!-- Avocado -->
+            
+            <!-- Edit -->
+     
+        <div class="recipe-card">
+            <img src="images/recipes/avocadoegg.jpg" alt="Oatmeal with Fresh Berries">
+            <h3>Avocado Toast with Poached Egg</h3>
+            <p>Creamy avocado spread on whole-grain toast, topped with a perfectly poached egg for a protein-packed breakfast.</p>
+            <a href="#" onclick="toggleContent('avocadoeggContent', this)">Read More</a>
+            <div id="avocadoeggContent" class="hidden-content">
+           <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Avocados are rich in monounsaturated fats, which can help reduce bad cholesterol levels, promoting cardiovascular health. Eggs contain omega-3 fatty acids that also support heart function.</li>
+    <li><strong>Weight Management:</strong> The combination of healthy fats and protein in avocado and eggs helps keep you fuller for longer, reducing cravings and supporting weight management.</li>
+    <li><strong>Digestive Health:</strong> Avocados are high in fiber, which aids digestion and promotes gut health by encouraging regular bowel movements.</li>
+    <li><strong>Blood Sugar Control:</strong> The fats in avocado, along with the protein in eggs, help prevent blood sugar spikes by slowing the absorption of carbohydrates from the toast.</li>
+    <li><strong>Nutrient-Dense:</strong> Avocados provide a wide range of essential nutrients, including potassium, vitamin K, folate, and B vitamins. Eggs add high-quality protein, vitamin D, and choline, which supports brain health.</li>
+    <li><strong>Antioxidant Boost:</strong> Avocados contain antioxidants like lutein and zeaxanthin, which support eye health, while eggs contribute additional antioxidants, helping to reduce inflammation.</li>
+    <li><strong>Energy:</strong> This meal provides a balanced combination of carbohydrates, fats, and proteins, offering sustained energy throughout the day.</li>
+</ul>
+<p>This dish makes an excellent choice for a nutrient-packed and balanced breakfast or snack.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here’s the approximate nutritional breakdown for a serving of Avocado Toast with a Poached Egg:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 slice of whole-grain toast, 1/2 avocado, 1 poached egg</li>
+    <li><strong>Calories:</strong> ~300 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~25g</li>
+    <li><strong>Sugars:</strong> ~1g (from bread)</li>
+    <li><strong>Fiber:</strong> ~7g</li>
+    <li><strong>Protein:</strong> ~10g</li>
+    <li><strong>Fat:</strong> ~20g</li>
+    <li><strong>Saturated Fat:</strong> ~4g</li>
+    <li><strong>Potassium:</strong> ~500mg</li>
+    <li><strong>Vitamin A:</strong> ~200 IU (from egg)</li>
+    <li><strong>Iron:</strong> ~2mg</li>
+    <li><strong>Vitamin C:</strong> ~10mg (from avocado)</li>
+</ul>
+
+<h4>Delicious Avocado Toast with Poached Egg Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>1 slice of whole-grain or sourdough bread</li>
+    <li>1/2 ripe avocado</li>
+    <li>1 egg</li>
+    <li>A pinch of salt and pepper</li>
+    <li>A squeeze of fresh lemon juice (optional)</li>
+    <li>Red pepper flakes or other seasonings (optional)</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Toast the Bread:</strong> Lightly toast the slice of whole-grain bread until it’s golden and crisp.</li>
+    <li><strong>Prepare the Avocado:</strong> Mash the avocado in a small bowl. Add a pinch of salt, pepper, and a squeeze of lemon juice for added flavor, if desired.</li>
+    <li><strong>Poach the Egg:</strong> Bring a small pot of water to a gentle simmer. Crack the egg into a small bowl, then carefully slide it into the simmering water. Cook for about 3-4 minutes until the whites are set but the yolk remains runny.</li>
+    <li><strong>Assemble the Toast:</strong> Spread the mashed avocado evenly over the toasted bread. Top with the poached egg.</li>
+    <li><strong>Season and Serve:</strong> Add a sprinkle of red pepper flakes, extra salt, or any seasonings you like. Serve immediately and enjoy!</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>This quick and easy meal is a great way to start the day with a healthy, satisfying dish that’s full of essential nutrients!</p>
+            </div>
+        </div>
+  
+        
+        
+
+        <div class="recipe-card">
+            <img src="images/recipes/smoothiebowl.jpg" alt="Smoothie Bowl with Superfoods">
+            <h3>Smoothie Bowl with Superfoods</h3>
+            <p>A vibrant smoothie bowl made with acai, bananas, and a variety of superfoods like chia seeds and goji berries.</p>
+       <a href="#" onclick="toggleContent('smoothiebowlContent', this)">Read More</a>
+            <div id="smoothiebowlContent" class="hidden-content"> 
+          <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Smoothie bowls made with berries and chia seeds are rich in antioxidants and omega-3 fatty acids, which support cardiovascular health by reducing inflammation and improving cholesterol levels.</li>
+    <li><strong>Weight Management:</strong> The fiber from fruits like bananas and chia seeds, along with healthy fats from ingredients like almond butter, helps keep you fuller for longer, reducing the likelihood of overeating.</li>
+    <li><strong>Digestive Health:</strong> Superfoods such as chia seeds, flaxseeds, and spinach are high in fiber, aiding digestion and promoting a healthy gut.</li>
+    <li><strong>Blood Sugar Control:</strong> Adding ingredients like spinach, chia seeds, and almond butter helps stabilize blood sugar levels by providing protein and fat, slowing down the release of glucose from fruit sugars.</li>
+    <li><strong>Antioxidant Boost:</strong> Superfoods like goji berries, blueberries, and acai powder are packed with antioxidants, which protect the body from free radical damage and promote healthy skin.</li>
+    <li><strong>Energy:</strong> A smoothie bowl provides a balanced mix of carbohydrates, healthy fats, and protein, giving you sustained energy throughout the day.</li>
+    <li><strong>Immunity Support:</strong> Superfoods like spirulina and acai are known for their immune-boosting properties, providing essential vitamins and antioxidants that help strengthen the body’s defenses.</li>
+</ul>
+<p>This smoothie bowl is an ideal way to fuel your body with essential nutrients, antioxidants, and energy to kickstart your day.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here’s the approximate nutritional breakdown for a serving of Smoothie Bowl with Superfoods:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 bowl</li>
+    <li><strong>Calories:</strong> ~350 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~45g</li>
+    <li><strong>Sugars:</strong> ~20g (from natural fruit sources)</li>
+    <li><strong>Fiber:</strong> ~10g</li>
+    <li><strong>Protein:</strong> ~8g</li>
+    <li><strong>Fat:</strong> ~15g</li>
+    <li><strong>Saturated Fat:</strong> ~2g</li>
+    <li><strong>Potassium:</strong> ~500mg</li>
+    <li><strong>Vitamin C:</strong> ~30mg (from fruits)</li>
+    <li><strong>Calcium:</strong> ~100mg (from seeds and plant-based milk)</li>
+    <li><strong>Iron:</strong> ~3mg</li>
+    <li><strong>Omega-3s:</strong> ~3g (from chia or flaxseeds)</li>
+</ul>
+
+<h4>Delicious Smoothie Bowl with Superfoods Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>1 frozen banana</li>
+    <li>1/2 cup frozen mixed berries (blueberries, raspberries, or strawberries)</li>
+    <li>1/4 cup spinach or kale (optional)</li>
+    <li>1 tablespoon almond butter</li>
+    <li>1 tablespoon chia seeds or flaxseeds</li>
+    <li>1/4 cup unsweetened almond milk (or any plant-based milk)</li>
+    <li>1 teaspoon acai powder (optional)</li>
+    <li>Toppings: granola, sliced fresh fruit, coconut flakes, goji berries, or any superfoods you like</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Blend the Smoothie Base:</strong> In a blender, combine the frozen banana, mixed berries, spinach, almond butter, chia seeds, almond milk, and acai powder (if using). Blend until smooth and creamy, adding more liquid if needed to reach your desired consistency.</li>
+    <li><strong>Serve in a Bowl:</strong> Pour the smoothie into a bowl.</li>
+    <li><strong>Add Toppings:</strong> Top the smoothie with your favorite toppings such as granola, sliced fresh fruit, coconut flakes, or goji berries for added texture and nutrients.</li>
+    <li><strong>Enjoy:</strong> Serve immediately and enjoy this nutrient-packed meal!</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>Customize your smoothie bowl by experimenting with different fruits, seeds, and toppings to create a delicious, nutrient-rich breakfast or snack that suits your taste!</p>  
+      
+      
+     </div> 
+        </div>
+
+        <div class="recipe-card">
+            <img src="images/recipes/yogurt.jpg" alt="Greek Yogurt Parfait with Honey">
+            <h3>Greek Yogurt Parfait with Honey</h3>
+            <p>Layered Greek yogurt with crunchy granola, honey, and mixed berries for a quick, healthy breakfast option.</p>
+            <a href="#" onclick="toggleContent('yogurtContent', this)">Read More</a>
+            <div id="yogurtContent" class="hidden-content"> 
+      <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Greek yogurt is rich in protein and probiotics, which support heart health by improving cholesterol levels. Honey and nuts provide antioxidants, reducing inflammation and oxidative stress.</li>
+    <li><strong>Weight Management:</strong> The high protein content in Greek yogurt keeps you feeling full longer, helping to control appetite and reduce overall calorie intake, which can support weight management.</li>
+    <li><strong>Digestive Health:</strong> Probiotics in Greek yogurt promote a healthy gut by improving digestion and maintaining a balanced microbiome. Fiber from nuts and fruit also aids digestion.</li>
+    <li><strong>Blood Sugar Control:</strong> Greek yogurt and nuts provide protein and healthy fats that help regulate blood sugar levels, while honey adds natural sweetness without causing a rapid spike in blood sugar.</li>
+    <li><strong>Antioxidant Boost:</strong> Honey, nuts, and fruits are all sources of antioxidants, which protect the body from free radical damage, boost immunity, and promote skin health.</li>
+    <li><strong>Energy:</strong> A combination of protein, healthy fats, and carbohydrates from yogurt, honey, and fruits provides a balanced source of energy, ideal for powering through the day.</li>
+    <li><strong>Bone Health:</strong> Greek yogurt is an excellent source of calcium, which helps maintain strong bones and teeth. Adding nuts like almonds further boosts calcium and magnesium intake, both crucial for bone health.</li>
+</ul>
+<p>This Greek yogurt parfait is a delicious and nutritious way to support heart health, improve digestion, and provide sustained energy.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here’s the approximate nutritional breakdown for a serving of Greek Yogurt Parfait with Honey:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 parfait</li>
+    <li><strong>Calories:</strong> ~300 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~30g</li>
+    <li><strong>Sugars:</strong> ~20g (from honey and fruit)</li>
+    <li><strong>Fiber:</strong> ~5g</li>
+    <li><strong>Protein:</strong> ~15g</li>
+    <li><strong>Fat:</strong> ~10g</li>
+    <li><strong>Saturated Fat:</strong> ~3g</li>
+    <li><strong>Calcium:</strong> ~200mg</li>
+    <li><strong>Iron:</strong> ~1mg</li>
+    <li><strong>Potassium:</strong> ~400mg</li>
+</ul>
+
+<h4>Delicious Greek Yogurt Parfait with Honey Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>1 cup Greek yogurt (plain or vanilla)</li>
+    <li>1 tablespoon honey</li>
+    <li>1/4 cup mixed berries (blueberries, raspberries, or strawberries)</li>
+    <li>1/4 cup granola or nuts (almonds, walnuts, or pistachios)</li>
+    <li>1 teaspoon chia seeds or flaxseeds (optional)</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Layer the Yogurt:</strong> In a glass or bowl, add a layer of Greek yogurt.</li>
+    <li><strong>Add Honey:</strong> Drizzle half the honey over the yogurt.</li>
+    <li><strong>Add Berries and Granola:</strong> Top with a layer of mixed berries and a sprinkle of granola or nuts.</li>
+    <li><strong>Repeat Layers:</strong> Add another layer of yogurt, followed by the remaining honey, berries, and granola or nuts.</li>
+    <li><strong>Serve:</strong> Enjoy immediately or refrigerate for later. For extra texture and nutrition, sprinkle chia or flaxseeds on top.</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>This parfait can be customized with your favorite fruits, nuts, and seeds to make it a perfect breakfast, snack, or dessert!</p>      
+            
+      </div>
+      </div>
+
+        <div class="recipe-card">
+            <img src="images/recipes/chia.jpg" alt="Chia Pudding with Almond Butter">
+            <h3>Chia Pudding with Almond Butter</h3>
+            <p>A creamy chia pudding infused with almond butter and topped with sliced bananas and almonds for extra texture.</p>
+        <a href="#" onclick="toggleContent('chiaContent', this)">Read More</a>
+            <div id="chiaContent" class="hidden-content">
+       <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Chia seeds are high in omega-3 fatty acids, which help lower inflammation and support heart health. Almond butter also provides healthy fats that promote cardiovascular health.</li>
+    <li><strong>Weight Management:</strong> The combination of fiber from chia seeds and protein from almond butter helps keep you full longer, reducing the chances of overeating and supporting weight management.</li>
+    <li><strong>Digestive Health:</strong> Chia seeds are rich in fiber, which aids digestion and promotes regular bowel movements, keeping your digestive system healthy.</li>
+    <li><strong>Blood Sugar Control:</strong> Chia seeds and almond butter provide protein, fiber, and healthy fats that help slow the release of sugar into the bloodstream, preventing rapid spikes in blood sugar levels.</li>
+    <li><strong>Antioxidant Boost:</strong> Almond butter and chia seeds are packed with antioxidants, which help protect the body from oxidative stress and inflammation, supporting overall health and wellness.</li>
+    <li><strong>Energy:</strong> Chia pudding with almond butter provides a balanced mix of carbohydrates, healthy fats, and protein, giving you sustained energy to power through the day.</li>
+    <li><strong>Bone Health:</strong> Chia seeds are a good source of calcium and magnesium, both of which are essential for strong bones and teeth.</li>
+</ul>
+<p>This chia pudding is a delicious, nutrient-dense option for supporting heart health, digestion, and providing sustained energy.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here’s the approximate nutritional breakdown for a serving of Chia Pudding with Almond Butter:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 pudding</li>
+    <li><strong>Calories:</strong> ~350 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~30g</li>
+    <li><strong>Sugars:</strong> ~10g (from natural sweeteners and fruit)</li>
+    <li><strong>Fiber:</strong> ~12g</li>
+    <li><strong>Protein:</strong> ~10g</li>
+    <li><strong>Fat:</strong> ~20g</li>
+    <li><strong>Saturated Fat:</strong> ~2g</li>
+    <li><strong>Calcium:</strong> ~200mg</li>
+    <li><strong>Iron:</strong> ~3mg</li>
+    <li><strong>Potassium:</strong> ~300mg</li>
+    <li><strong>Omega-3s:</strong> ~5g (from chia seeds)</li>
+</ul>
+
+<h4>Delicious Chia Pudding with Almond Butter Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>3 tablespoons chia seeds</li>
+    <li>1 cup unsweetened almond milk (or any plant-based milk)</li>
+    <li>1 tablespoon almond butter</li>
+    <li>1 tablespoon maple syrup or honey (optional, for sweetness)</li>
+    <li>1/2 teaspoon vanilla extract</li>
+    <li>Toppings: fresh berries, sliced almonds, or coconut flakes (optional)</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Mix the Ingredients:</strong> In a bowl or jar, combine the chia seeds, almond milk, almond butter, maple syrup or honey, and vanilla extract. Stir well to ensure the chia seeds are evenly distributed.</li>
+    <li><strong>Let it Sit:</strong> Cover the bowl or jar and refrigerate for at least 4 hours or overnight, allowing the chia seeds to absorb the liquid and form a pudding-like consistency.</li>
+    <li><strong>Add Toppings:</strong> Once the chia pudding has thickened, top with fresh berries, sliced almonds, or coconut flakes for added texture and flavor.</li>
+    <li><strong>Serve:</strong> Enjoy the chia pudding chilled as a nutritious breakfast, snack, or dessert!</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>Customize your chia pudding by experimenting with different flavors and toppings, such as adding cocoa powder for a chocolatey twist or swapping almond butter with peanut butter for a new flavor!</p>       
+        
+        </div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="images/recipes/tofu.jpg" alt="Scrambled Tofu with Veggies">
+            <h3>Scrambled Tofu with Veggies</h3>
+            <p>Scrambled tofu sautéed with a mix of vegetables, making for a delicious and nutritious plant-based breakfast.</p>
+        <a href="#" onclick="toggleContent('tofuContent', this)">Read More</a>
+            <div id="tofuContent" class="hidden-content">
+            <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Tofu is a great source of plant-based protein and contains heart-healthy fats. It's also cholesterol-free, making it an excellent option for supporting cardiovascular health. Adding vegetables like spinach and tomatoes further boosts heart health with fiber and antioxidants.</li>
+    <li><strong>Weight Management:</strong> Tofu is low in calories but high in protein, helping you feel full longer. The fiber from veggies like bell peppers and spinach adds bulk to the meal, aiding in appetite control and supporting weight management.</li>
+    <li><strong>Digestive Health:</strong> The fiber content in the veggies used, such as spinach, bell peppers, and onions, supports healthy digestion and regular bowel movements.</li>
+    <li><strong>Blood Sugar Control:</strong> Tofu and veggies provide a combination of protein, fiber, and healthy fats, which help regulate blood sugar levels, reducing the likelihood of spikes after meals.</li>
+    <li><strong>Antioxidant Boost:</strong> Vegetables like spinach, bell peppers, and tomatoes are packed with antioxidants such as vitamins A, C, and E, which help protect the body from oxidative stress and inflammation.</li>
+    <li><strong>Energy:</strong> This dish provides a balanced mix of protein, carbohydrates, and healthy fats, giving you sustained energy throughout the day without feeling sluggish.</li>
+    <li><strong>Bone Health:</strong> Tofu is often fortified with calcium, and adding leafy greens like spinach further boosts calcium intake, promoting strong bones and teeth.</li>
+</ul>
+<p>Scrambled tofu with veggies is a nutrient-packed dish that supports heart health, digestion, and provides long-lasting energy.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here’s the approximate nutritional breakdown for a serving of Scrambled Tofu with Veggies:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 bowl</li>
+    <li><strong>Calories:</strong> ~250 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~15g</li>
+    <li><strong>Sugars:</strong> ~5g (from natural sources)</li>
+    <li><strong>Fiber:</strong> ~7g</li>
+    <li><strong>Protein:</strong> ~20g</li>
+    <li><strong>Fat:</strong> ~12g</li>
+    <li><strong>Saturated Fat:</strong> ~2g</li>
+    <li><strong>Calcium:</strong> ~150mg</li>
+    <li><strong>Iron:</strong> ~3mg</li>
+    <li><strong>Potassium:</strong> ~500mg</li>
+</ul>
+
+<h4>Delicious Scrambled Tofu with Veggies Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>1 block of firm tofu (drained and crumbled)</li>
+    <li>1 tablespoon olive oil or coconut oil</li>
+    <li>1/2 onion, chopped</li>
+    <li>1/2 bell pepper, diced</li>
+    <li>1 cup spinach or kale</li>
+    <li>1/2 cup cherry tomatoes, halved</li>
+    <li>1/2 teaspoon turmeric (for color and flavor)</li>
+    <li>1/2 teaspoon garlic powder</li>
+    <li>Salt and pepper to taste</li>
+    <li>Optional toppings: avocado slices, nutritional yeast, or hot sauce</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Sauté the Veggies:</strong> Heat the oil in a pan over medium heat. Add the onion and bell pepper, sautéing for 5 minutes or until softened.</li>
+    <li><strong>Add Tofu and Spices:</strong> Crumble the tofu into the pan and add turmeric, garlic powder, salt, and pepper. Stir well to combine, cooking for about 5-7 minutes.</li>
+    <li><strong>Add Greens and Tomatoes:</strong> Stir in the spinach (or kale) and cherry tomatoes, cooking for another 3-4 minutes until the greens are wilted and the tomatoes soften.</li>
+    <li><strong>Serve:</strong> Transfer the scrambled tofu to a plate, top with avocado slices, nutritional yeast, or hot sauce if desired, and enjoy!</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>This tofu scramble is perfect for breakfast, lunch, or dinner. Pair it with whole-grain toast or wrap it in a tortilla for a quick and nutritious meal!</p>
+        </div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="images/recipes/muffins.jpg" alt="Egg Muffins with Spinach and Cheese">
+            <h3>Egg Muffins with Spinach and Cheese</h3>
+            <p>These easy-to-make egg muffins are loaded with spinach, cheese, and veggies, perfect for a quick breakfast on the go.</p>
+ <a href="#" onclick="toggleContent('muffinsContent', this)">Read More</a>
+            <div id="muffinsContent" class="hidden-content"> 
+            <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Eggs are a great source of high-quality protein and contain nutrients like omega-3s that support heart health. Spinach is rich in antioxidants and fiber, which contribute to overall cardiovascular health.</li>
+    <li><strong>Weight Management:</strong> Eggs are low in calories but high in protein, helping you feel full longer. The fiber from spinach also helps with satiety and controlling calorie intake, aiding in weight management.</li>
+    <li><strong>Digestive Health:</strong> Spinach is a great source of dietary fiber, which supports healthy digestion and promotes regular bowel movements.</li>
+    <li><strong>Blood Sugar Control:</strong> The protein and healthy fats in eggs, combined with the fiber from spinach, help stabilize blood sugar levels and prevent rapid spikes after meals.</li>
+    <li><strong>Antioxidant Boost:</strong> Both eggs and spinach are rich in antioxidants like lutein and zeaxanthin, which are beneficial for eye health and protecting the body from oxidative stress.</li>
+    <li><strong>Energy:</strong> This dish provides a balanced mix of protein, fats, and fiber, giving you long-lasting energy to power through your day.</li>
+    <li><strong>Bone Health:</strong> Eggs are a good source of vitamin D, and adding cheese provides calcium, both of which are important for maintaining strong bones and teeth.</li>
+</ul>
+<p>Egg muffins with spinach and cheese are a tasty, nutritious, and convenient meal option that supports heart health, digestion, and provides energy throughout the day.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here’s the approximate nutritional breakdown for a serving of Egg Muffins with Spinach and Cheese:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 2 muffins</li>
+    <li><strong>Calories:</strong> ~180 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~4g</li>
+    <li><strong>Sugars:</strong> ~1g (from natural sources)</li>
+    <li><strong>Fiber:</strong> ~2g</li>
+    <li><strong>Protein:</strong> ~12g</li>
+    <li><strong>Fat:</strong> ~12g</li>
+    <li><strong>Saturated Fat:</strong> ~4g</li>
+    <li><strong>Calcium:</strong> ~150mg</li>
+    <li><strong>Iron:</strong> ~2mg</li>
+    <li><strong>Potassium:</strong> ~300mg</li>
+</ul>
+
+<h4>Delicious Egg Muffins with Spinach and Cheese Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>6 large eggs</li>
+    <li>1 cup fresh spinach, chopped</li>
+    <li>1/2 cup shredded cheese (cheddar or mozzarella)</li>
+    <li>1/4 cup milk or plant-based milk</li>
+    <li>1/4 cup diced bell pepper (optional)</li>
+    <li>Salt and pepper to taste</li>
+    <li>Optional: chopped herbs like parsley or chives</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Preheat the Oven:</strong> Preheat your oven to 350°F (175°C) and grease a muffin tin or use muffin liners.</li>
+    <li><strong>Whisk the Eggs:</strong> In a bowl, whisk together the eggs, milk, salt, and pepper until well combined.</li>
+    <li><strong>Add Veggies and Cheese:</strong> Stir in the chopped spinach, shredded cheese, bell pepper, and any herbs you’re using.</li>
+    <li><strong>Fill the Muffin Tin:</strong> Pour the egg mixture evenly into the muffin tin, filling each cup about 3/4 full.</li>
+    <li><strong>Bake:</strong> Bake in the preheated oven for 20-25 minutes, or until the muffins are set and lightly golden on top.</li>
+    <li><strong>Serve:</strong> Let the muffins cool slightly before removing them from the tin. Enjoy warm or refrigerate for a quick and healthy meal later!</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>These egg muffins can be enjoyed for breakfast, lunch, or as a snack. Pair them with a side of whole-grain toast or a fresh salad for a complete meal!</p>
+            
+        </div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="images/recipes/overnightoats.jpg" alt="Overnight Oats with Chia Seeds">
+            <h3>Overnight Oats with Chia Seeds</h3>
+            <p>Prepare these overnight oats in advance with chia seeds, almond milk, and your favorite toppings for a no-fuss morning meal.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="recipe-card">
+            <img src="images/recipes/protein-pancakes.jpg" alt="Protein Pancakes with Banana">
+            <h3>Protein Pancakes with Banana</h3>
+            <p>Fluffy pancakes made with protein powder and topped with banana slices and maple syrup for a balanced breakfast.</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="recipe-card">
+            <img src="images/recipes/fruit-granola.jpg" alt="Fruit and Nut Granola">
+            <h3>Fruit and Nut Granola</h3>
+            <p>This crunchy granola is packed with dried fruits, nuts, and seeds, perfect for topping yogurt or enjoying with milk.</p>
+            <a href="#">Read More</a>
+        </div>
+    </div>
+
+</body>
+</html>
