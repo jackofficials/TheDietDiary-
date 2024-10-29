@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Diet Diary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #3a7bd5, #3a6073);
+            padding: 10px 20px;
+            color: white;
+            position: relative;
+            z-index: 10;
+            box-shadow: none;
+        }
+        .top-nav h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .menu-icon {
+            cursor: pointer;
+            font-size: 30px;
+            display: inline-block;
+            color: white;
+        }
+        .profile-menu {
+            position: relative;
+            display: inline-block;
+        }
+        .profile-menu .profile-btn {
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            background: none;
+            color: white;
+        }
+        .profile-btn i {
+            font-size: 24px;
+        }
+        .profile-menu-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            min-width: 160px;
+            z-index: 1;
+        }
+        .profile-menu-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .profile-menu-content a:hover {
+            background-color: #3a6073;
+        }
+        .profile-menu:hover .profile-menu-content {
+            display: block;
+        }
+        .side-nav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #2d3436;
+            overflow-x: hidden;
+            transition: 0.5s ease;
+            padding-top: 60px;
+            z-index: 999;
+        }
+        .side-nav a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        .side-nav a:hover {
+            background-color: #636e72;
+            padding-left: 40px;
+        }
+        .side-nav .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 36px;
+            color: white;
+        }
+
+        /* Recipe Dropdown Styles */
+        .recipe-dropdown {
+            display: none;
+            padding-left: 20px;
+        }
+        .side-nav a.recipe-btn:hover + .recipe-dropdown {
+            display: block;
+        }
+        .recipe-dropdown a {
+            font-size: 16px;
+        }
+        
+        /* Tips & Tricks Dropdown Styles */
+.tips-dropdown {
+    display: none;
+    padding-left: 20px;
+}
+.side-nav a.tips-btn:hover + .tips-dropdown {
+    display: block;
+}
+.tips-dropdown a {
+    font-size: 16px;
+}
+
+/* Success Stories Dropdown Styles */
+.success-dropdown {
+    display: none;
+    padding-left: 20px;
+}
+.side-nav a.success-btn:hover + .success-dropdown {
+    display: block;
+}
+.success-dropdown a {
+    font-size: 16px;
+}
+/* Recipe Dropdown Trigger */
+.side-nav a.recipe-btn {
+    cursor: pointer;
+}
+.side-nav a.recipe-btn.active + .recipe-dropdown {
+    display: block;
+}
+        
+        .hero {
+            position: relative;
+            background-image: url('images/nutricover.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero h2 {
+            position: relative;
+            font-size: 3em;
+            font-weight: bold;
+            padding: 20px;
+            z-index: 2;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        .article-preview {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .article {
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .article:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            background: linear-gradient(90deg, #3a7bd5, #3a6073);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: none;
+        }
+        footer p {
+            margin: 0;
+        }
+        @media screen and (max-width: 768px) {
+            .hero {
+                height: 250px;
+                font-size: 1.2em;
+            }
+            .article {
+                width: 90%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .hero {
+                height: 200px;
+                font-size: 1em;
+                text-align: center;
+            }
+            .article {
+                width: 100%;
+            }
+            .top-nav h1 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+  
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <div class="top-nav">
+        <div class="menu-icon" onclick="openNav()">&#9776;</div>
+        <h1>The Diet Diary</h1>
+        <div class="profile-menu">
+            <button class="profile-btn"><i class="fas fa-user-circle"></i></button>
+            <div class="profile-menu-content">
+                <a href="#" onclick="loadSignup()">Sign Up</a> <!-- Add the onclick event to load signup -->
+      <a href="#" onclick="loadLogin()">Login</a> <!-- Add the onclick event to load Login -->
+            </div>
+        </div>
+    </div>
+
+<!-- Side Navigation -->
+<div id="mySidenav" class="side-nav">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+    <a href="#">Home</a>
+    
+    <!-- Recipe Dropdown Trigger -->
+    <a href="javascript:void(0)" class="recipe-btn">Recipes</a>
+    <div class="recipe-dropdown">
+  <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="#">Dinner</a>
+        <a href="#">Snacks</a>
+        <a href="#">Vegan/Vegetarian</a>
+        <a href="#">Gluten-Free</a>
+        <a href="#">High-Protein</a>
+        <a href="#">Low-Carb</a>
+    </div>
+
+    <!-- Tips & Tricks Dropdown Trigger -->
+    <a href="javascript:void(0)" class="tips-btn">Tips & Tricks</a>
+    <div class="tips-dropdown">
+        <a href="#">Meal Prep Hacks</a>
+        <a href="#">Grocery Shopping Tips</a>
+        <a href="#">Healthy Cooking Techniques</a>
+        <a href="#">Eating Mindfully</a>
+        <a href="#">Portion Control Tricks</a>
+        <a href="#">Snacking Smarter</a>
+        <a href="#">Hydration Tips</a>
+        <a href="#">Food Substitutions</a>
+        <a href="#">Maintaining a Balanced Diet</a>
+        <a href="#">Dealing with Cravings</a>
+    </div>
+
+    <!-- Success Stories Dropdown Trigger -->
+    <a href="javascript:void(0)" class="success-btn">Success Stories</a>
+    <div class="success-dropdown">
+        <a href="#">Weight Loss Journeys</a>
+        <a href="#">Fitness and Energy Boosts</a>
+        <a href="#">Improved Health Outcomes</a>
+        <a href="#">Before and After Photos</a>
+        <a href="#">Interviews & Testimonials</a>
+        <a href="#">Video Stories</a>
+        <a href="#">Success by Diet Type</a>
+        <a href="#">Support and Community</a>
+        <a href="#">Celebrating Milestones</a>
+        <a href="#">Lessons Learned</a>
+    </div>
+
+    <a href="contact.html">Contact</a>
+</div>
+
+    <div class="hero">
+        <h2>Healthy Eating Starts Here!</h2>
+    </div>
+
+    <section>
+        <h2>Latest Articles</h2>
+        <div class="article-preview">
+            <div class="article">
+                <h3>5 Healthy Breakfast Ideas</h3>
+                <p>Start your day right with these nutritious breakfast options...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="article">
+                <h3>Meal Prep for Beginners</h3>
+                <p>Learn how to meal prep efficiently and save time...</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="article">
+                <h3>Understanding Macronutrients</h3>
+                <p>Get to know the building blocks of your diet...</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 The Diet Diary | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Function to open the sidebar
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        // Function to close the sidebar
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        // Function to load the signup page
+        function loadSignup() {
+            // Reload the page to the signup form
+            window.location.href = "signup.html"; // Make sure you create a signup.html file
+        }
+                // Function to load the Login page
+        function loadLogin() {
+            // Reload the page to the Login form
+            window.location.href = "Login.html"; // Make sure you create a signup.html file
+        }
+        
+        
+    
+        // Function to toggle dropdown on click
+document.querySelector('.recipe-btn').addEventListener('click', function() {
+    this.classList.toggle('active');
+});
+    </script>
+
+</body>
+</html>
