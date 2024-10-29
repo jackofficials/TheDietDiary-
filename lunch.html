@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakfast Recipes - The Diet Diary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #3a7bd5;
+            color: white;
+            margin: 0;
+        }
+        .recipe-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .recipe-card {
+            background-color: white;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .recipe-card h3 {
+            margin: 10px 0;
+        }
+        .recipe-card p {
+            font-size: 14px;
+        }
+        .recipe-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #3a7bd5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .recipe-card a:hover {
+            text-decoration: underline;
+        }
+        .hidden-content {
+            display: none; /* Ensure hidden content is initially hidden */
+        }
+        @media screen and (max-width: 768px) {
+            .recipe-card {
+                width: 90%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .recipe-card {
+                width: 100%;
+            }
+        }
+    </style>
+    
+    <script>
+        function toggleContent(id, link) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                link.textContent = "Show Less"; // Change link text to "Show Less"
+            } else {
+                content.style.display = "none";
+                link.textContent = "Read More"; // Change link text to "Read More"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Lunch Recipes</h1>
+
+    <div class="recipe-container">
+        <div class="recipe-card">
+            <img src="images/recipes/grilled-chicken.jpg" alt="Grilled Chicken and Veggie Salad">
+            <h3>Grilled Chicken and Veggie Salad</h3>
+            <p>A refreshing salad of grilled chicken mixed with vibrant veggies like bell peppers, tomatoes, and leafy greens, perfect for a nutrient-packed meal.</p>
+            <a href="#" onclick="toggleContent('grilled-chicken', this)">Read More</a>
+            <div id="grilled-chicken" class="hidden-content">
+           <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Grilled chicken is a lean source of protein with low saturated fat, supporting heart health. Adding vegetables like spinach, tomatoes, and bell peppers provides fiber and antioxidants, further benefiting cardiovascular health.</li>
+    <li><strong>Weight Management:</strong> High in protein and low in calories, grilled chicken helps you feel full longer. The fiber from mixed greens and veggies also aids in appetite control, making this dish ideal for weight management.</li>
+    <li><strong>Digestive Health:</strong> The fiber from the assorted vegetables supports healthy digestion, contributing to regular bowel movements.</li>
+    <li><strong>Blood Sugar Control:</strong> The combination of protein in chicken and fiber from vegetables helps stabilize blood sugar levels, making this a balanced meal for managing energy levels throughout the day.</li>
+    <li><strong>Antioxidant Boost:</strong> Colorful vegetables like bell peppers, tomatoes, and leafy greens are packed with antioxidants, including vitamins C and A, which protect the body from oxidative stress.</li>
+    <li><strong>Energy:</strong> This meal offers a balanced mix of protein, carbs, and healthy fats, providing sustained energy without causing blood sugar spikes.</li>
+    <li><strong>Bone Health:</strong> Leafy greens like spinach are high in calcium and vitamin K, which are essential for maintaining strong bones.</li>
+</ul>
+<p>Grilled Chicken and Veggies Salad is a nutritious, balanced option that supports heart health, digestion, and energy, making it a satisfying meal for lunch.</p>
+<h4>Grilled Chicken and Veggies Salad - Nutritional Breakdown</h4>
+<p>Here’s the approximate nutritional breakdown for a serving of Grilled Chicken and Veggies Salad:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 bowl</li>
+    <li><strong>Calories:</strong> ~300 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~20g</li>
+    <li><strong>Sugars:</strong> ~6g (from natural sources)</li>
+    <li><strong>Fiber:</strong> ~8g</li>
+    <li><strong>Protein:</strong> ~25g</li>
+    <li><strong>Fat:</strong> ~10g</li>
+    <li><strong>Saturated Fat:</strong> ~2g</li>
+    <li><strong>Calcium:</strong> ~120mg</li>
+    <li><strong>Iron:</strong> ~3mg</li>
+    <li><strong>Potassium:</strong> ~600mg</li>
+</ul>
+<h4>Delicious Grilled Chicken and Veggies Salad Recipe</h4>
+<h5>Ingredients:</h5>
+<ul>
+    <li>1 grilled chicken breast, sliced</li>
+    <li>1 tablespoon olive oil</li>
+    <li>2 cups mixed greens (spinach, arugula, etc.)</li>
+    <li>1/2 bell pepper, sliced</li>
+    <li>1/2 cup cherry tomatoes, halved</li>
+    <li>1/4 cucumber, sliced</li>
+    <li>1/4 avocado, sliced</li>
+    <li>1 tablespoon balsamic vinaigrette or dressing of choice</li>
+    <li>Salt and pepper to taste</li>
+</ul>
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Prepare the Salad Base:</strong> In a large bowl, add mixed greens, bell pepper, cherry tomatoes, cucumber, and avocado.</li>
+    <li><strong>Add Grilled Chicken:</strong> Place the sliced grilled chicken breast on top of the veggies.</li>
+    <li><strong>Dress and Toss:</strong> Drizzle with olive oil and balsamic vinaigrette, then gently toss to combine. Season with salt and pepper to taste.</li>
+    <li><strong>Serve:</strong> Enjoy the salad fresh, or pack it in a container for a healthy lunch on the go.</li>
+</ol>
+<h5>Serving Suggestion:</h5>
+<p>For extra flavor, sprinkle with a handful of nuts or seeds, such as almonds or sunflower seeds, to add crunch and additional nutrients to your salad.</p>
+            </div>
+        </div>
+
+
+        <!-- Other recipe cards... -->
+      <!-- Avocado -->
+            
+            <!-- Edit -->
+     
+        <div class="recipe-card">
+            <img src="images/recipes/zucchini-noddles.jpg" alt="Zucchini Noodles with Pesto and Shrimp">
+            <h3>Zucchini Noodles with Pesto and Shrimp</h3>
+<p>Fresh zucchini noodles tossed in pesto sauce, topped with succulent shrimp for a light, protein-rich meal.</p>
+            <a href="#" onclick="toggleContent('zucchini-noddles', this)">Read More</a>
+            <div id="zucchini-noddles" class="hidden-content">
+           <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Shrimp is a lean source of protein and low in saturated fats, which supports cardiovascular health. The olive oil in the pesto provides healthy monounsaturated fats, further benefiting heart health.</li>
+    <li><strong>Weight Management:</strong> Zucchini noodles are low in calories and carbs, making them a great pasta alternative. Protein from shrimp, combined with fiber from zucchini, helps you feel full longer, aiding in weight management.</li>
+    <li><strong>Digestive Health:</strong> Zucchini is high in fiber, supporting healthy digestion. The basil in pesto also provides compounds beneficial for gut health.</li>
+    <li><strong>Blood Sugar Control:</strong> With low-carb zucchini noodles and protein-rich shrimp, this meal helps stabilize blood sugar levels, preventing spikes and crashes.</li>
+    <li><strong>Antioxidant Boost:</strong> Basil and olive oil in pesto are rich in antioxidants, helping protect cells from oxidative stress. Zucchini adds essential vitamins like C and A, supporting immunity.</li>
+    <li><strong>Energy:</strong> This dish provides balanced protein, healthy fats, and low-carb veggies for sustained energy without blood sugar spikes.</li>
+    <li><strong>Bone Health:</strong> Shrimp is a source of calcium, while leafy greens in the pesto offer vitamins supporting strong bones and teeth.</li>
+</ul>
+<p>Zucchini Noodles with Pesto and Shrimp is a nutrient-dense, low-carb option that supports heart health, digestion, and sustained energy, making it an excellent choice for a healthy meal.</p>
+
+<h4>Zucchini Noodles with Pesto and Shrimp - Nutritional Breakdown</h4>
+<p>Here’s the approximate nutritional breakdown for a serving:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 bowl</li>
+    <li><strong>Calories:</strong> ~250 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~10g</li>
+    <li><strong>Sugars:</strong> ~5g (from natural sources)</li>
+    <li><strong>Fiber:</strong> ~4g</li>
+    <li><strong>Protein:</strong> ~20g</li>
+    <li><strong>Fat:</strong> ~15g</li>
+    <li><strong>Saturated Fat:</strong> ~2g</li>
+    <li><strong>Calcium:</strong> ~100mg</li>
+    <li><strong>Iron:</strong> ~2mg</li>
+    <li><strong>Potassium:</strong> ~450mg</li>
+</ul>
+
+<h4>Delicious Zucchini Noodles with Pesto and Shrimp Recipe</h4>
+<h5>Ingredients:</h5>
+<ul>
+    <li>2 medium zucchinis, spiralized into noodles</li>
+    <li>1 tablespoon olive oil</li>
+    <li>1/2 pound shrimp, peeled and deveined</li>
+    <li>1/4 cup pesto (store-bought or homemade)</li>
+    <li>1/2 cup cherry tomatoes, halved</li>
+    <li>Salt and pepper to taste</li>
+    <li>Optional toppings: grated Parmesan cheese or red pepper flakes</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Cook the Shrimp:</strong> In a skillet, heat olive oil over medium heat. Add shrimp and cook for 2-3 minutes on each side until pink and cooked through. Season with salt and pepper, then set aside.</li>
+    <li><strong>Sauté Zucchini Noodles:</strong> In the same skillet, add the zucchini noodles and cook for 1-2 minutes, just until they begin to soften. Do not overcook to keep them crisp.</li>
+    <li><strong>Combine Ingredients:</strong> Add the cooked shrimp back to the skillet along with the pesto and cherry tomatoes. Toss everything gently to combine and warm through.</li>
+    <li><strong>Serve:</strong> Transfer to a bowl, top with Parmesan cheese or red pepper flakes if desired, and enjoy!</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>For added flavor and texture, sprinkle with toasted pine nuts or fresh basil leaves before serving.</p>
+            </div>
+        </div>
+  
+        
+        
+
+        <div class="recipe-card">
+            <img src="images/recipes/smoothiebowl.jpg" alt="Smoothie Bowl with Superfoods">
+            <h3>Lentil and Quinoa Buddha Bowl</h3>
+            <p>A vibrant smoothie bowl made with acai, bananas, and a variety of superfoods like chia seeds and goji berries.</p>
+       <a href="#" onclick="toggleContent('smoothiebowlContent', this)">Read More</a>
+            <div id="smoothiebowlContent" class="hidden-content"> 
+          <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Smoothie bowls made with berries and chia seeds are rich in antioxidants and omega-3 fatty acids, which support cardiovascular health by reducing inflammation and improving cholesterol levels.</li>
+    <li><strong>Weight Management:</strong> The fiber from fruits like bananas and chia seeds, along with healthy fats from ingredients like almond butter, helps keep you fuller for longer, reducing the likelihood of overeating.</li>
+    <li><strong>Digestive Health:</strong> Superfoods such as chia seeds, flaxseeds, and spinach are high in fiber, aiding digestion and promoting a healthy gut.</li>
+    <li><strong>Blood Sugar Control:</strong> Adding ingredients like spinach, chia seeds, and almond butter helps stabilize blood sugar levels by providing protein and fat, slowing down the release of glucose from fruit sugars.</li>
+    <li><strong>Antioxidant Boost:</strong> Superfoods like goji berries, blueberries, and acai powder are packed with antioxidants, which protect the body from free radical damage and promote healthy skin.</li>
+    <li><strong>Energy:</strong> A smoothie bowl provides a balanced mix of carbohydrates, healthy fats, and protein, giving you sustained energy throughout the day.</li>
+    <li><strong>Immunity Support:</strong> Superfoods like spirulina and acai are known for their immune-boosting properties, providing essential vitamins and antioxidants that help strengthen the body’s defenses.</li>
+</ul>
+<p>This smoothie bowl is an ideal way to fuel your body with essential nutrients, antioxidants, and energy to kickstart your day.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here’s the approximate nutritional breakdown for a serving of Smoothie Bowl with Superfoods:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 bowl</li>
+    <li><strong>Calories:</strong> ~350 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~45g</li>
+    <li><strong>Sugars:</strong> ~20g (from natural fruit sources)</li>
+    <li><strong>Fiber:</strong> ~10g</li>
+    <li><strong>Protein:</strong> ~8g</li>
+    <li><strong>Fat:</strong> ~15g</li>
+    <li><strong>Saturated Fat:</strong> ~2g</li>
+    <li><strong>Potassium:</strong> ~500mg</li>
+    <li><strong>Vitamin C:</strong> ~30mg (from fruits)</li>
+    <li><strong>Calcium:</strong> ~100mg (from seeds and plant-based milk)</li>
+    <li><strong>Iron:</strong> ~3mg</li>
+    <li><strong>Omega-3s:</strong> ~3g (from chia or flaxseeds)</li>
+</ul>
+
+<h4>Delicious Smoothie Bowl with Superfoods Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>1 frozen banana</li>
+    <li>1/2 cup frozen mixed berries (blueberries, raspberries, or strawberries)</li>
+    <li>1/4 cup spinach or kale (optional)</li>
+    <li>1 tablespoon almond butter</li>
+    <li>1 tablespoon chia seeds or flaxseeds</li>
+    <li>1/4 cup unsweetened almond milk (or any plant-based milk)</li>
+    <li>1 teaspoon acai powder (optional)</li>
+    <li>Toppings: granola, sliced fresh fruit, coconut flakes, goji berries, or any superfoods you like</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Blend the Smoothie Base:</strong> In a blender, combine the frozen banana, mixed berries, spinach, almond butter, chia seeds, almond milk, and acai powder (if using). Blend until smooth and creamy, adding more liquid if needed to reach your desired consistency.</li>
+    <li><strong>Serve in a Bowl:</strong> Pour the smoothie into a bowl.</li>
+    <li><strong>Add Toppings:</strong> Top the smoothie with your favorite toppings such as granola, sliced fresh fruit, coconut flakes, or goji berries for added texture and nutrients.</li>
+    <li><strong>Enjoy:</strong> Serve immediately and enjoy this nutrient-packed meal!</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>Customize your smoothie bowl by experimenting with different fruits, seeds, and toppings to create a delicious, nutrient-rich breakfast or snack that suits your taste!</p>  
+      
+      
+     </div> 
+        </div>
+
+        <div class="recipe-card">
+            <img src="images/recipes/yogurt.jpg" alt="Greek Yogurt Parfait with Honey">
+            <h3>Greek Yogurt Chicken Salad Lettuce Wraps</h3>
+            <p>Layered Greek yogurt with crunchy granola, honey, and mixed berries for a quick, healthy breakfast option.</p>
+            <a href="#" onclick="toggleContent('yogurtContent', this)">Read More</a>
+            <div id="yogurtContent" class="hidden-content"> 
+      <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Greek yogurt is rich in protein and probiotics, which support heart health by improving cholesterol levels. Honey and nuts provide antioxidants, reducing inflammation and oxidative stress.</li>
+    <li><strong>Weight Management:</strong> The high protein content in Greek yogurt keeps you feeling full longer, helping to control appetite and reduce overall calorie intake, which can support weight management.</li>
+    <li><strong>Digestive Health:</strong> Probiotics in Greek yogurt promote a healthy gut by improving digestion and maintaining a balanced microbiome. Fiber from nuts and fruit also aids digestion.</li>
+    <li><strong>Blood Sugar Control:</strong> Greek yogurt and nuts provide protein and healthy fats that help regulate blood sugar levels, while honey adds natural sweetness without causing a rapid spike in blood sugar.</li>
+    <li><strong>Antioxidant Boost:</strong> Honey, nuts, and fruits are all sources of antioxidants, which protect the body from free radical damage, boost immunity, and promote skin health.</li>
+    <li><strong>Energy:</strong> A combination of protein, healthy fats, and carbohydrates from yogurt, honey, and fruits provides a balanced source of energy, ideal for powering through the day.</li>
+    <li><strong>Bone Health:</strong> Greek yogurt is an excellent source of calcium, which helps maintain strong bones and teeth. Adding nuts like almonds further boosts calcium and magnesium intake, both crucial for bone health.</li>
+</ul>
+<p>This Greek yogurt parfait is a delicious and nutritious way to support heart health, improve digestion, and provide sustained energy.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here’s the approximate nutritional breakdown for a serving of Greek Yogurt Parfait with Honey:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 parfait</li>
+    <li><strong>Calories:</strong> ~300 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~30g</li>
+    <li><strong>Sugars:</strong> ~20g (from honey and fruit)</li>
+    <li><strong>Fiber:</strong> ~5g</li>
+    <li><strong>Protein:</strong> ~15g</li>
+    <li><strong>Fat:</strong> ~10g</li>
+    <li><strong>Saturated Fat:</strong> ~3g</li>
+    <li><strong>Calcium:</strong> ~200mg</li>
+    <li><strong>Iron:</strong> ~1mg</li>
+    <li><strong>Potassium:</strong> ~400mg</li>
+</ul>
+
+<h4>Delicious Greek Yogurt Parfait with Honey Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>1 cup Greek yogurt (plain or vanilla)</li>
+    <li>1 tablespoon honey</li>
+    <li>1/4 cup mixed berries (blueberries, raspberries, or strawberries)</li>
+    <li>1/4 cup granola or nuts (almonds, walnuts, or pistachios)</li>
+    <li>1 teaspoon chia seeds or flaxseeds (optional)</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Layer the Yogurt:</strong> In a glass or bowl, add a layer of Greek yogurt.</li>
+    <li><strong>Add Honey:</strong> Drizzle half the honey over the yogurt.</li>
+    <li><strong>Add Berries and Granola:</strong> Top with a layer of mixed berries and a sprinkle of granola or nuts.</li>
+    <li><strong>Repeat Layers:</strong> Add another layer of yogurt, followed by the remaining honey, berries, and granola or nuts.</li>
+    <li><strong>Serve:</strong> Enjoy immediately or refrigerate for later. For extra texture and nutrition, sprinkle chia or flaxseeds on top.</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>This parfait can be customized with your favorite fruits, nuts, and seeds to make it a perfect breakfast, snack, or dessert!</p>      
+            
+      </div>
+      </div>
+
+        <div class="recipe-card">
+            <img src="images/recipes/chia.jpg" alt="Chia Pudding with Almond Butter">
+            <h3>Chickpea and Veggie Stir-Fry</h3>
+            <p>A creamy chia pudding infused with almond butter and topped with sliced bananas and almonds for extra texture.</p>
+        <a href="#" onclick="toggleContent('chiaContent', this)">Read More</a>
+            <div id="chiaContent" class="hidden-content">
+       <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Chia seeds are high in omega-3 fatty acids, which help lower inflammation and support heart health. Almond butter also provides healthy fats that promote cardiovascular health.</li>
+    <li><strong>Weight Management:</strong> The combination of fiber from chia seeds and protein from almond butter helps keep you full longer, reducing the chances of overeating and supporting weight management.</li>
+    <li><strong>Digestive Health:</strong> Chia seeds are rich in fiber, which aids digestion and promotes regular bowel movements, keeping your digestive system healthy.</li>
+    <li><strong>Blood Sugar Control:</strong> Chia seeds and almond butter provide protein, fiber, and healthy fats that help slow the release of sugar into the bloodstream, preventing rapid spikes in blood sugar levels.</li>
+    <li><strong>Antioxidant Boost:</strong> Almond butter and chia seeds are packed with antioxidants, which help protect the body from oxidative stress and inflammation, supporting overall health and wellness.</li>
+    <li><strong>Energy:</strong> Chia pudding with almond butter provides a balanced mix of carbohydrates, healthy fats, and protein, giving you sustained energy to power through the day.</li>
+    <li><strong>Bone Health:</strong> Chia seeds are a good source of calcium and magnesium, both of which are essential for strong bones and teeth.</li>
+</ul>
+<p>This chia pudding is a delicious, nutrient-dense option for supporting heart health, digestion, and providing sustained energy.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here’s the approximate nutritional breakdown for a serving of Chia Pudding with Almond Butter:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 pudding</li>
+    <li><strong>Calories:</strong> ~350 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~30g</li>
+    <li><strong>Sugars:</strong> ~10g (from natural sweeteners and fruit)</li>
+    <li><strong>Fiber:</strong> ~12g</li>
+    <li><strong>Protein:</strong> ~10g</li>
+    <li><strong>Fat:</strong> ~20g</li>
+    <li><strong>Saturated Fat:</strong> ~2g</li>
+    <li><strong>Calcium:</strong> ~200mg</li>
+    <li><strong>Iron:</strong> ~3mg</li>
+    <li><strong>Potassium:</strong> ~300mg</li>
+    <li><strong>Omega-3s:</strong> ~5g (from chia seeds)</li>
+</ul>
+
+<h4>Delicious Chia Pudding with Almond Butter Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>3 tablespoons chia seeds</li>
+    <li>1 cup unsweetened almond milk (or any plant-based milk)</li>
+    <li>1 tablespoon almond butter</li>
+    <li>1 tablespoon maple syrup or honey (optional, for sweetness)</li>
+    <li>1/2 teaspoon vanilla extract</li>
+    <li>Toppings: fresh berries, sliced almonds, or coconut flakes (optional)</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Mix the Ingredients:</strong> In a bowl or jar, combine the chia seeds, almond milk, almond butter, maple syrup or honey, and vanilla extract. Stir well to ensure the chia seeds are evenly distributed.</li>
+    <li><strong>Let it Sit:</strong> Cover the bowl or jar and refrigerate for at least 4 hours or overnight, allowing the chia seeds to absorb the liquid and form a pudding-like consistency.</li>
+    <li><strong>Add Toppings:</strong> Once the chia pudding has thickened, top with fresh berries, sliced almonds, or coconut flakes for added texture and flavor.</li>
+    <li><strong>Serve:</strong> Enjoy the chia pudding chilled as a nutritious breakfast, snack, or dessert!</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>Customize your chia pudding by experimenting with different flavors and toppings, such as adding cocoa powder for a chocolatey twist or swapping almond butter with peanut butter for a new flavor!</p>       
+        
+        </div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="images/recipes/tofu.jpg" alt="Scrambled Tofu with Veggies">
+            <h3>Cauliflower Rice Stir-Fry with Tofu</h3>
+            <p>Scrambled tofu sautéed with a mix of vegetables, making for a delicious and nutritious plant-based breakfast.</p>
+        <a href="#" onclick="toggleContent('tofuContent', this)">Read More</a>
+            <div id="tofuContent" class="hidden-content">
+            <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Tofu is a great source of plant-based protein and contains heart-healthy fats. It's also cholesterol-free, making it an excellent option for supporting cardiovascular health. Adding vegetables like spinach and tomatoes further boosts heart health with fiber and antioxidants.</li>
+    <li><strong>Weight Management:</strong> Tofu is low in calories but high in protein, helping you feel full longer. The fiber from veggies like bell peppers and spinach adds bulk to the meal, aiding in appetite control and supporting weight management.</li>
+    <li><strong>Digestive Health:</strong> The fiber content in the veggies used, such as spinach, bell peppers, and onions, supports healthy digestion and regular bowel movements.</li>
+    <li><strong>Blood Sugar Control:</strong> Tofu and veggies provide a combination of protein, fiber, and healthy fats, which help regulate blood sugar levels, reducing the likelihood of spikes after meals.</li>
+    <li><strong>Antioxidant Boost:</strong> Vegetables like spinach, bell peppers, and tomatoes are packed with antioxidants such as vitamins A, C, and E, which help protect the body from oxidative stress and inflammation.</li>
+    <li><strong>Energy:</strong> This dish provides a balanced mix of protein, carbohydrates, and healthy fats, giving you sustained energy throughout the day without feeling sluggish.</li>
+    <li><strong>Bone Health:</strong> Tofu is often fortified with calcium, and adding leafy greens like spinach further boosts calcium intake, promoting strong bones and teeth.</li>
+</ul>
+<p>Scrambled tofu with veggies is a nutrient-packed dish that supports heart health, digestion, and provides long-lasting energy.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here’s the approximate nutritional breakdown for a serving of Scrambled Tofu with Veggies:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 bowl</li>
+    <li><strong>Calories:</strong> ~250 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~15g</li>
+    <li><strong>Sugars:</strong> ~5g (from natural sources)</li>
+    <li><strong>Fiber:</strong> ~7g</li>
+    <li><strong>Protein:</strong> ~20g</li>
+    <li><strong>Fat:</strong> ~12g</li>
+    <li><strong>Saturated Fat:</strong> ~2g</li>
+    <li><strong>Calcium:</strong> ~150mg</li>
+    <li><strong>Iron:</strong> ~3mg</li>
+    <li><strong>Potassium:</strong> ~500mg</li>
+</ul>
+
+<h4>Delicious Scrambled Tofu with Veggies Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>1 block of firm tofu (drained and crumbled)</li>
+    <li>1 tablespoon olive oil or coconut oil</li>
+    <li>1/2 onion, chopped</li>
+    <li>1/2 bell pepper, diced</li>
+    <li>1 cup spinach or kale</li>
+    <li>1/2 cup cherry tomatoes, halved</li>
+    <li>1/2 teaspoon turmeric (for color and flavor)</li>
+    <li>1/2 teaspoon garlic powder</li>
+    <li>Salt and pepper to taste</li>
+    <li>Optional toppings: avocado slices, nutritional yeast, or hot sauce</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Sauté the Veggies:</strong> Heat the oil in a pan over medium heat. Add the onion and bell pepper, sautéing for 5 minutes or until softened.</li>
+    <li><strong>Add Tofu and Spices:</strong> Crumble the tofu into the pan and add turmeric, garlic powder, salt, and pepper. Stir well to combine, cooking for about 5-7 minutes.</li>
+    <li><strong>Add Greens and Tomatoes:</strong> Stir in the spinach (or kale) and cherry tomatoes, cooking for another 3-4 minutes until the greens are wilted and the tomatoes soften.</li>
+    <li><strong>Serve:</strong> Transfer the scrambled tofu to a plate, top with avocado slices, nutritional yeast, or hot sauce if desired, and enjoy!</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>This tofu scramble is perfect for breakfast, lunch, or dinner. Pair it with whole-grain toast or wrap it in a tortilla for a quick and nutritious meal!</p>
+        </div>
+        </div>
+        
+        
+        
+        
+
+<!-- end div container -->
+  </div>
+
+</body>
+</html>
