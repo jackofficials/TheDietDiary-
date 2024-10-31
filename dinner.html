@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinner Recipes - The Diet Diary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #3a7bd5;
+            color: white;
+            margin: 0;
+        }
+        .recipe-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .recipe-card {
+            background-color: white;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .recipe-card h3 {
+            margin: 10px 0;
+        }
+        .recipe-card p {
+            font-size: 14px;
+        }
+        .recipe-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #3a7bd5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .recipe-card a:hover {
+            text-decoration: underline;
+        }
+        .hidden-content {
+            display: none; /* Ensure hidden content is initially hidden */
+        }
+        @media screen and (max-width: 768px) {
+            .recipe-card {
+                width: 90%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .recipe-card {
+                width: 100%;
+            }
+        }
+    </style>
+    
+    <script>
+        function toggleContent(id, link) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                link.textContent = "Show Less"; // Change link text to "Show Less"
+            } else {
+                content.style.display = "none";
+                link.textContent = "Read More"; // Change link text to "Read More"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Dinner Recipes</h1>
+
+    <div class="recipe-container">
+        <div class="recipe-card">
+            <img src="images/recipes/lemon-chicken.jpg" alt="Lemon Herb Baked Chicken with Roasted Vegetables">
+            <h3>Lemon Herb Baked Chicken with Roasted Vegetables</h3>
+<p>A flavorful baked chicken dish with a blend of herbs, paired with roasted vegetables for a nutritious and satisfying meal.
+</p>
+            <a href="#" onclick="toggleContent('lemon-chickenContent', this)">Read More</a>
+            <div id="lemon-chickenContent" class="hidden-content">
+           <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Lemon herb chicken is low in saturated fat and rich in lean protein, which can help maintain a healthy weight and reduce the risk of heart disease. The antioxidants in lemons can also help lower inflammation and oxidative stress.</li>
+    <li><strong>Digestive Health:</strong> The fiber from the roasted vegetables promotes digestive health, aiding in regular bowel movements and overall gut health.</li>
+    <li><strong>Weight Management:</strong> Lean protein from the chicken helps keep you feeling full, which can prevent overeating and support weight management efforts.</li>
+    <li><strong>Blood Sugar Control:</strong> The low-carb content of this dish, combined with fiber from the vegetables, helps stabilize blood sugar levels, making it a great option for those monitoring their glucose.</li>
+    <li><strong>Vitamin C Boost:</strong> The lemon and vegetables provide a good source of vitamin C, which supports immune function and skin health.</li>
+    <li><strong>Energy:</strong> This meal offers a balanced source of energy with protein from chicken and healthy carbohydrates from the vegetables.</li>
+    <li><strong>Bone Health:</strong> The combination of chicken and vegetables contributes to a well-rounded nutrient profile that supports bone health.</li>
+</ul>
+<p>This dish is an excellent choice for anyone looking for a nutritious, balanced, and satisfying meal for dinner.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here's the approximate nutritional breakdown for a serving of Lemon Herb Baked Chicken with Roasted Vegetables based on the ingredients listed:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 plate</li>
+    <li><strong>Calories:</strong> ~350 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~30g</li>
+    <li><strong>Sugars:</strong> ~5g (from vegetables)</li>
+    <li><strong>Fiber:</strong> ~7g</li>
+    <li><strong>Protein:</strong> ~30g</li>
+    <li><strong>Fat:</strong> ~15g</li>
+    <li><strong>Saturated Fat:</strong> ~3g</li>
+    <li><strong>Calcium:</strong> ~50mg</li>
+    <li><strong>Iron:</strong> ~2mg</li>
+    <li><strong>Potassium:</strong> ~600mg</li>
+    <li><strong>Vitamin C:</strong> ~25mg</li>
+    <li><strong>Sodium:</strong> ~300mg</li>
+</ul>
+<p>These values can vary based on specific ingredients and portion sizes used in preparation.</p>
+
+<h4>Delicious Lemon Herb Baked Chicken with Roasted Vegetables Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>4 boneless, skinless chicken breasts</li>
+    <li>2 tablespoons olive oil</li>
+    <li>Juice of 1 lemon</li>
+    <li>1 teaspoon dried oregano</li>
+    <li>1 teaspoon garlic powder</li>
+    <li>Salt and pepper to taste</li>
+    <li>2 cups mixed vegetables (e.g., bell peppers, zucchini, carrots)</li>
+    <li>1 teaspoon fresh parsley, chopped (for garnish)</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Preheat the Oven:</strong> Preheat your oven to 400°F (200°C).</li>
+    <li><strong>Marinate the Chicken:</strong> In a bowl, mix olive oil, lemon juice, oregano, garlic powder, salt, and pepper. Add the chicken breasts, coating them well. Let them marinate for at least 15 minutes.</li>
+    <li><strong>Prepare the Vegetables:</strong> Chop the mixed vegetables and toss them with a little olive oil, salt, and pepper.</li>
+    <li><strong>Arrange in Baking Dish:</strong> Place the marinated chicken in a baking dish and surround it with the prepared vegetables.</li>
+    <li><strong>Bake:</strong> Bake for 25-30 minutes, or until the chicken is cooked through and the vegetables are tender.</li>
+    <li><strong>Serve:</strong> Garnish with fresh parsley and serve warm. Enjoy!</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>This lemon herb chicken can be paired with a side of quinoa or a fresh garden salad for a complete and satisfying meal.</p>
+
+<p>This delicious Lemon Herb Baked Chicken with Roasted Vegetables is not only flavorful but also packed with nutrients, making it a perfect dinner option!</p>
+            </div>
+        </div>
+
+
+        <!-- Other recipe cards... -->
+      <!-- Avocado -->
+            
+            <!-- Edit -->
+     
+        <div class="recipe-card">
+            <img src="images/recipes/chickpea-curry.jpg" alt="Vegetable and Chickpea Curry">
+            <h3>Vegetable and Chickpea Curry</h3>
+            <p>A hearty and comforting curry filled with vegetables and protein-rich chickpeas, perfect with rice or naan.</p>
+            <a href="#" onclick="toggleContent('chickpea-curryContent', this)">Read More</a>
+            <div id="chickpea-curryContent" class="hidden-content">
+           <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Chickpeas are low in saturated fat and high in fiber, which helps lower cholesterol levels and supports cardiovascular health. The variety of vegetables adds antioxidants that promote heart health.</li>
+    <li><strong>Digestive Health:</strong> The fiber content from chickpeas and vegetables aids digestion, promoting regular bowel movements and maintaining a healthy gut.</li>
+    <li><strong>Weight Management:</strong> High in protein and fiber, this curry helps keep you feeling full, reducing the likelihood of overeating, which can support weight management efforts.</li>
+    <li><strong>Blood Sugar Control:</strong> The complex carbohydrates in chickpeas have a low glycemic index, which helps stabilize blood sugar levels and prevents spikes.</li>
+    <li><strong>Vitamin Boost:</strong> This dish is packed with essential vitamins (A, C, K) and minerals (iron, magnesium) from the colorful vegetables and chickpeas, supporting overall health and immunity.</li>
+    <li><strong>Anti-Inflammatory:</strong> Spices like turmeric and ginger are known for their anti-inflammatory properties, which can help reduce inflammation in the body.</li>
+    <li><strong>Energy:</strong> The combination of protein and carbohydrates provides a balanced source of energy to power you through your day.</li>
+</ul>
+<p>This Vegetable and Chickpea Curry is an excellent choice for anyone looking for a nutritious, hearty, and satisfying meal for dinner.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here's the approximate nutritional breakdown for a serving of Vegetable and Chickpea Curry based on the ingredients listed:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 bowl</li>
+    <li><strong>Calories:</strong> ~350 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~45g</li>
+    <li><strong>Sugars:</strong> ~8g (from vegetables)</li>
+    <li><strong>Fiber:</strong> ~10g</li>
+    <li><strong>Protein:</strong> ~15g</li>
+    <li><strong>Fat:</strong> ~10g</li>
+    <li><strong>Saturated Fat:</strong> ~1.5g</li>
+    <li><strong>Calcium:</strong> ~80mg</li>
+    <li><strong>Iron:</strong> ~4mg</li>
+    <li><strong>Potassium:</strong> ~700mg</li>
+    <li><strong>Vitamin C:</strong> ~30mg</li>
+    <li><strong>Sodium:</strong> ~300mg</li>
+</ul>
+<p>These values can vary based on specific ingredients and portion sizes used in preparation.</p>
+
+<h4>Delicious Vegetable and Chickpea Curry Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>1 tablespoon olive oil</li>
+    <li>1 onion, chopped</li>
+    <li>2 cloves garlic, minced</li>
+    <li>1 teaspoon ginger, minced</li>
+    <li>1 bell pepper, diced</li>
+    <li>1 cup carrots, sliced</li>
+    <li>1 zucchini, diced</li>
+    <li>1 can (15 oz) chickpeas, drained and rinsed</li>
+    <li>1 can (14 oz) diced tomatoes</li>
+    <li>1 can (14 oz) coconut milk</li>
+    <li>2 teaspoons curry powder</li>
+    <li>1 teaspoon turmeric</li>
+    <li>Salt and pepper to taste</li>
+    <li>Fresh cilantro for garnish (optional)</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Heat the Oil:</strong> In a large pot, heat olive oil over medium heat. Add the chopped onion and sauté until translucent.</li>
+    <li><strong>Add Garlic and Ginger:</strong> Stir in the minced garlic and ginger, cooking for about 1 minute until fragrant.</li>
+    <li><strong>Cook the Vegetables:</strong> Add the bell pepper, carrots, and zucchini. Cook for about 5-7 minutes, stirring occasionally, until the vegetables start to soften.</li>
+    <li><strong>Add Chickpeas and Spices:</strong> Stir in the chickpeas, diced tomatoes, coconut milk, curry powder, turmeric, salt, and pepper. Bring the mixture to a simmer.</li>
+    <li><strong>Simmer:</strong> Reduce heat and let it simmer for about 15-20 minutes, allowing the flavors to meld and the sauce to thicken.</li>
+    <li><strong>Serve:</strong> Garnish with fresh cilantro if desired. Serve warm with rice or naan.</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>This vegetable and chickpea curry pairs wonderfully with steamed rice or warm naan bread for a complete and hearty meal.</p>
+
+<p>This flavorful Vegetable and Chickpea Curry is not only delicious but also packed with nutrients, making it a perfect dinner option!</p>
+            </div>
+        </div>
+  
+        
+        
+
+        <div class="recipe-card">
+            <img src="images/recipes/shrimp-pasta.jpg" alt="Garlic Butter Shrimp Pasta">
+            <h3>Garlic Butter Shrimp Pasta</h3>
+            <p>A quick pasta dish with succulent shrimp, garlic butter sauce, and fresh herbs for a light yet satisfying dinner.</p>
+       <a href="#" onclick="toggleContent('shrimp-pastaContent', this)">Read More</a>
+            <div id="shrimp-pastaContent" class="hidden-content"> 
+          <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>Heart Health:</strong> Shrimp is low in calories and saturated fat while being high in protein. The omega-3 fatty acids found in shrimp and butter contribute to heart health and may help lower blood pressure.</li>
+    <li><strong>Digestive Health:</strong> The pasta provides carbohydrates for energy, while garlic and parsley are known to support healthy digestion and gut health.</li>
+    <li><strong>Weight Management:</strong> This dish is filling yet low in calories, making it a great option for those looking to manage their weight without sacrificing flavor.</li>
+    <li><strong>Protein Boost:</strong> Shrimp is an excellent source of lean protein, essential for muscle repair and growth, making this dish perfect for an active lifestyle.</li>
+    <li><strong>Antioxidant Benefits:</strong> Garlic is rich in antioxidants and has anti-inflammatory properties, which can help reduce oxidative stress in the body.</li>
+    <li><strong>Vitamin Rich:</strong> This dish is packed with essential vitamins and minerals from garlic, parsley, and shrimp, contributing to overall health and wellness.</li>
+    <li><strong>Energy:</strong> The carbohydrates in pasta provide a quick source of energy, while the healthy fats from butter enhance satiety.</li>
+</ul>
+<p>This Garlic Butter Shrimp Pasta is a delicious and satisfying dinner option that combines flavor and nutrition.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here's the approximate nutritional breakdown for a serving of Garlic Butter Shrimp Pasta based on the ingredients listed:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 plate</li>
+    <li><strong>Calories:</strong> ~400 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~45g</li>
+    <li><strong>Sugars:</strong> ~2g</li>
+    <li><strong>Fiber:</strong> ~3g</li>
+    <li><strong>Protein:</strong> ~25g</li>
+    <li><strong>Fat:</strong> ~15g</li>
+    <li><strong>Saturated Fat:</strong> ~6g</li>
+    <li><strong>Calcium:</strong> ~80mg</li>
+    <li><strong>Iron:</strong> ~2mg</li>
+    <li><strong>Potassium:</strong> ~500mg</li>
+    <li><strong>Sodium:</strong> ~600mg</li>
+</ul>
+<p>These values can vary based on specific ingredients and portion sizes used in preparation.</p>
+
+<h4>Delicious Garlic Butter Shrimp Pasta Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>8 oz spaghetti or your choice of pasta</li>
+    <li>1 lb shrimp, peeled and deveined</li>
+    <li>4 tablespoons unsalted butter</li>
+    <li>4 cloves garlic, minced</li>
+    <li>1/4 teaspoon red pepper flakes (optional)</li>
+    <li>Salt and pepper to taste</li>
+    <li>1/4 cup fresh parsley, chopped</li>
+    <li>Zest and juice of 1 lemon</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Cook the Pasta:</strong> In a large pot, cook the spaghetti according to package instructions until al dente. Drain and set aside, reserving 1/2 cup of pasta water.</li>
+    <li><strong>Sauté the Shrimp:</strong> In a large skillet, melt 2 tablespoons of butter over medium heat. Add the shrimp, seasoning with salt and pepper, and cook until they turn pink and opaque, about 2-3 minutes per side. Remove shrimp from the skillet and set aside.</li>
+    <li><strong>Make the Garlic Butter Sauce:</strong> In the same skillet, add the remaining butter and minced garlic. Sauté for about 1 minute until fragrant, then add red pepper flakes if using.</li>
+    <li><strong>Combine Pasta and Shrimp:</strong> Add the cooked pasta and shrimp back into the skillet, tossing to combine. If the mixture seems dry, add reserved pasta water a little at a time until you reach your desired consistency.</li>
+    <li><strong>Add Lemon and Parsley:</strong> Stir in lemon zest, lemon juice, and chopped parsley, mixing well to coat everything evenly.</li>
+    <li><strong>Serve:</strong> Divide the pasta among plates, garnishing with extra parsley and lemon wedges if desired.</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>This Garlic Butter Shrimp Pasta pairs beautifully with a side salad or garlic bread for a complete meal.</p>
+
+<p>This flavorful Garlic Butter Shrimp Pasta is quick to prepare and makes for a perfect dinner, combining delicious flavors with a nutritious profile!</p>  
+      
+      
+     </div> 
+        </div>
+
+        <div class="recipe-card">
+            <img src="images/recipes/turkey.jpg" alt="Stuffed Bell Peppers with Ground Turkey and Quinoa">
+            <h3>Stuffed Bell Peppers with Ground Turkey and Quinoa</h3>
+            <p>A healthy, filling dish with lean ground turkey, quinoa, and vegetables stuffed in bell peppers.</p>
+            <a href="#" onclick="toggleContent('turkeyContent', this)">Read More</a>
+            <div id="turkeyContent" class="hidden-content"> 
+      <h4>Health Benefits and Nutrition</h4>
+<ul>
+    <li><strong>High in Protein:</strong> Ground turkey is a lean source of protein, which is essential for muscle growth and repair, making this dish a great option for those looking to increase their protein intake.</li>
+    <li><strong>Nutrient-Dense:</strong> Bell peppers are rich in vitamins A and C, antioxidants, and other beneficial nutrients, promoting overall health and supporting the immune system.</li>
+    <li><strong>Fiber-Rich:</strong> Quinoa and bell peppers are high in dietary fiber, which aids digestion, helps maintain healthy blood sugar levels, and promotes a feeling of fullness.</li>
+    <li><strong>Low in Calories:</strong> This dish is relatively low in calories, making it a suitable choice for those looking to manage their weight without sacrificing flavor or satisfaction.</li>
+    <li><strong>Healthy Fats:</strong> Adding olive oil or avocado to the dish provides heart-healthy fats that are beneficial for cardiovascular health.</li>
+    <li><strong>Versatile and Customizable:</strong> You can easily customize the stuffing with various vegetables, spices, and grains to fit your taste preferences and dietary needs.</li>
+    <li><strong>Quick and Easy:</strong> This recipe is simple to prepare and makes a delicious weeknight meal that's perfect for meal prep.</li>
+</ul>
+<p>Stuffed Bell Peppers with Ground Turkey and Quinoa is a nutritious and satisfying dish that combines a variety of health benefits.</p>
+
+<h4>Nutritional Breakdown</h4>
+<p>Here's the approximate nutritional breakdown for a serving of Stuffed Bell Peppers with Ground Turkey and Quinoa based on the ingredients listed:</p>
+<ul>
+    <li><strong>Serving Size:</strong> 1 stuffed pepper</li>
+    <li><strong>Calories:</strong> ~350 kcal</li>
+    <li><strong>Carbohydrates:</strong> ~30g</li>
+    <li><strong>Sugars:</strong> ~5g</li>
+    <li><strong>Fiber:</strong> ~7g</li>
+    <li><strong>Protein:</strong> ~25g</li>
+    <li><strong>Fat:</strong> ~10g</li>
+    <li><strong>Saturated Fat:</strong> ~2g</li>
+    <li><strong>Calcium:</strong> ~50mg</li>
+    <li><strong>Iron:</strong> ~3mg</li>
+    <li><strong>Potassium:</strong> ~600mg</li>
+    <li><strong>Sodium:</strong> ~400mg</li>
+</ul>
+<p>These values can vary based on specific ingredients and portion sizes used in preparation.</p>
+
+<h4>Delicious Stuffed Bell Peppers with Ground Turkey and Quinoa Recipe</h4>
+
+<h5>Ingredients:</h5>
+<ul>
+    <li>4 large bell peppers (any color)</li>
+    <li>1 lb ground turkey</li>
+    <li>1 cup cooked quinoa</li>
+    <li>1 cup diced tomatoes (canned or fresh)</li>
+    <li>1/2 cup onion, diced</li>
+    <li>2 cloves garlic, minced</li>
+    <li>1 teaspoon Italian seasoning</li>
+    <li>Salt and pepper to taste</li>
+    <li>1 cup shredded cheese (mozzarella or cheddar, optional)</li>
+    <li>Olive oil for sautéing</li>
+</ul>
+
+<h5>Instructions:</h5>
+<ol>
+    <li><strong>Preheat Oven:</strong> Preheat your oven to 375°F (190°C).</li>
+    <li><strong>Prepare the Bell Peppers:</strong> Cut the tops off the bell peppers and remove the seeds. Drizzle with a little olive oil and place them in a baking dish.</li>
+    <li><strong>Sauté the Filling:</strong> In a skillet, heat a little olive oil over medium heat. Add diced onion and garlic, sautéing until soft. Add ground turkey, cooking until browned. Stir in cooked quinoa, diced tomatoes, Italian seasoning, salt, and pepper. Mix well and cook for an additional 2-3 minutes.</li>
+    <li><strong>Stuff the Peppers:</strong> Fill each bell pepper with the turkey and quinoa mixture, pressing down gently to pack it in. If using, top with shredded cheese.</li>
+    <li><strong>Bake:</strong> Cover the baking dish with foil and bake for 25-30 minutes. Remove the foil and bake for an additional 10-15 minutes until the peppers are tender and the cheese is melted.</li>
+</ol>
+
+<h5>Serving Suggestion:</h5>
+<p>Serve warm, garnished with fresh herbs or a dollop of sour cream for added flavor.</p>
+
+<p>This Stuffed Bell Peppers with Ground Turkey and Quinoa recipe is not only delicious but also packed with nutrition, making it a perfect dinner choice for any occasion!</p>      
+            
+      </div>
+      </div>
+
+        
+    
+  </div>
+
+</body>
+</html>
