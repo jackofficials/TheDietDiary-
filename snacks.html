@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack Categories</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    .hidden {
+        display: none;
+        transition: max-height 0.3s ease-out;
+    }
+    .collapsible {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+    }
+    .collapsible.active {
+        max-height: 1000px;
+    }
+</style>
+    <script>
+    function toggleSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.classList.toggle('hidden');
+        section.classList.toggle('collapsible');
+        section.classList.toggle('active');
+    }
+</script>
+</head>
+<body class="bg-gray-100">
+    <!-- Main Container -->
+    <div class="flex flex-col items-center">
+        <!-- Snacks Header -->
+        <h1 class="text-3xl font-bold text-green-600 mt-8 mb-4">Snack Categories</h1>
+        
+        <!-- Snack Sections -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full max-w-6xl px-4">
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <button onclick="toggleSection('healthySnacks')" class="w-full text-left font-bold text-xl text-green-600">
+                    Healthy Snacks
+                </button>
+                
+                
+                <div id="healthySnacks" class="hidden mt-2">
+                  
+                  
+                    <div class="flex items-start mb-4">
+                        <img src="images/recipes/hummus.jpg" alt="Veggie Sticks with Hummus" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Veggie Sticks with Hummus</h3>
+                            <p class="text-gray-600">Carrot, cucumber, and bell pepper sticks served with a variety of hummus flavors.</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="flex items-start mb-4">
+                        <img src="images/recipes/fruit-salad.jpg" alt="Fruit Salad" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Fruit Salad</h3>
+                            <p class="text-gray-600">A mix of seasonal fruits, drizzled with honey or lime juice.</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Nuts and Seeds</h3>
+                            <p class="text-gray-600">A mix of almonds, walnuts, pumpkin seeds, and sunflower seeds.</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="flex items-start mb-4">
+                        <img src="images/recipes/greekyoghurt.jpg" alt="Greek Yogurt Parfait" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Greek Yogurt Parfait</h3>
+                            <p class="text-gray-600">Layered Greek yogurt with granola and fresh berries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+  <!--   Savory Snacks -->        
+
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <button onclick="toggleSection('savorySnacks')" class="w-full text-left font-bold text-xl text-green-600">
+                    Savory Snacks
+                </button>
+                
+                
+                <div id="savorySnacks" class="hidden mt-2">
+                  
+                  
+<div class="flex items-start mb-4">
+                        <img src="images/recipes/popcorn.jpg" alt="Popcorn" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Popcorn</h3>
+                            <p class="text-gray-600">Lightly salted or seasoned with herbs and spices.</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="flex items-start mb-4">
+                        <img src="images/recipes/Cheese.jpg" alt="Cheese" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Cheese and Crackers</h3>
+                            <p class="text-gray-600">A platter of assorted cheeses served with whole-grain crackers.</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="flex items-start mb-4">
+                        <img src="images/recipes/Roasted.jpg" alt="Roasted Chickpeas" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Roasted Chickpeas</h3>
+                            <p class="text-gray-600">Crunchy and flavorful roasted chickpeas seasoned with spices.</p>
+                        </div>
+                    </div>
+                    
+                    
+<div class="flex items-start mb-4">
+                        <img src="images/recipes/caprese.jpg" alt="Mini Caprese Skewers" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Mini Caprese Skewers</h3>
+                            <p class="text-gray-600">Cherry tomatoes, basil, and mozzarella balls drizzled with balsamic glaze.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <button onclick="toggleSection('sweetSnacks')" class="w-full text-left font-bold text-xl text-green-600">
+                    Sweet Snacks
+                </button>
+                
+                
+                <div id="sweetSnacks" class="hidden mt-2">
+                  
+                  
+                   <div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Energy Balls</h3>
+                            <p class="text-gray-600">No-bake bites made with oats, nut butter, honey, and chocolate chips.</p>
+                        </div>
+                    </div>
+                    
+                    
+<div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Banana Bread</h3>
+                            <p class="text-gray-600">Moist and delicious banana bread, perfect for snacking.</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Chocolate-Covered Pretzels</h3>
+                            <p class="text-gray-600">Sweet and salty snacks that are easy to make at home.</p>
+                        </div>
+                    </div>
+                    
+                    
+<div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Rice Cakes with Nut Butter</h3>
+                            <p class="text-gray-600">Rice cakes topped with almond or peanut butter and sliced bananas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <button onclick="toggleSection('easyToMakeSnacks')" class="w-full text-left font-bold text-xl text-green-600">
+                    Easy-to-Make Snacks
+                </button>
+                
+                
+              <div id="easyToMakeSnacks" class="hidden mt-2">
+                
+                
+                    <div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Avocado Toast</h3>
+                            <p class="text-gray-600">Whole-grain bread topped with smashed avocado, salt, and pepper.</p>
+                        </div>
+                    </div>
+                    
+                    
+<div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Smoothie Bowls</h3>
+                            <p class="text-gray-600">Blended smoothies topped with fruits, seeds, and nuts.</p>
+                        </div>
+                    </div>
+                    
+                    
+<div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Deviled Eggs</h3>
+                            <p class="text-gray-600">Hard-boiled eggs filled with a creamy mixture of yolk, mayo, and spices.</p>
+                        </div>
+                    </div>
+                    
+                    
+<div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Trail Mix</h3>
+                            <p class="text-gray-600">A customizable mix of nuts, seeds, dried fruits, and dark chocolate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <button onclick="toggleSection('popularSnackTrends')" class="w-full text-left font-bold text-xl text-green-600">
+                    Popular Snack Trends
+                </button>
+                
+                
+                <div id="popularSnackTrends" class="hidden mt-2">
+                  
+                  
+<div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Keto Snacks</h3>
+                            <p class="text-gray-600">Cheese crisps, pork rinds, and low-carb protein bars.</p>
+                        </div>
+                    </div>
+                    
+                    
+<div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Vegan Snacks</h3>
+                            <p class="text-gray-600">Plant-based chips, coconut yogurt, and chia pudding.</p>
+                        </div>
+                    </div>
+                    
+                    
+<div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Gluten-Free Options</h3>
+                            <p class="text-gray-600">Rice cakes, gluten-free granola, and popcorn.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <button onclick="toggleSection('internationalSnacks')" class="w-full text-left font-bold text-xl text-green-600">
+                    International Snacks
+                </button>
+                
+                
+                <div id="internationalSnacks" class="hidden mt-2">
+                  
+                  
+<div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Samosas</h3>
+                            <p class="text-gray-600">Savory pastries filled with spiced potatoes and peas.</p>
+                        </div>
+                    </div>
+                    
+                    
+<div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Bruschetta</h3>
+                            <p class="text-gray-600">Toasted bread topped with tomatoes, garlic, basil, and olive oil.</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="flex items-start mb-4">
+                        <img src="images/recipes/nuts.jpg" alt="Nuts and Seeds" class="w-20 h-20 rounded-md mr-4">
+                        <div>
+                            <h3 class="font-bold text-lg mb-1">Spring Rolls</h3>
+                            <p class="text-gray-600">Fresh vegetables wrapped in rice paper served with dipping sauce.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</body>
+</html>
